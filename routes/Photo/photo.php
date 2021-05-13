@@ -13,4 +13,5 @@ Route::group([
     )->except(['update']);
 
     Route::delete('/max-delete', [PhotoController::class, 'maxDelete']);
+    Route::post('/add-to-album', [PhotoController::class, 'addToAlbum']);
 });

@@ -9,6 +9,11 @@ class Photo extends Model
 {
     use HasFactory;
 
+    protected $hidden = [
+        'user_id',
+        'album_id'
+    ];
+
     protected $fillable = [
         'url',
         'photo_name',

@@ -13,7 +13,7 @@ class PhotoRepository extends BaseRepository
     }
 
     //metodo para pegar as fotos que foram marcadas para deletar pelo usuario
-    public function getPhotosToDelete($array_of_id)
+    public function selectPhotos($array_of_id)
     {
         return $this->model->whereIn('id', $array_of_id)->get();
     }

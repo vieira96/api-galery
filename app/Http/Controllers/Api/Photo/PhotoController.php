@@ -72,4 +72,17 @@ class PhotoController extends Controller
 
         return $this->responseSuccess();
     }
+
+    public function addToAlbum(PhotoRequest $request)
+    {
+        try {
+            $data = PhotoResource::collection(
+                $this->service->addToAlbum($request)
+            );
+        } catch( \Exception $e) {
+            return $this->responseError($e->getMessage());
+        }
+
+        return $this->responseSuccess($data);
+    }
 }

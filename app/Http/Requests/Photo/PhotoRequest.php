@@ -26,7 +26,8 @@ class PhotoRequest extends FormRequest
         return [
             'photos.*' => ['required', 'image'],
             'array_of_id' => ['sometimes', 'required' ,'array'],
-            'array_of_id.*' => ['exists:photos,id']
+            'array_of_id.*' => ['exists:photos,id'],
+            'album_id' => ['sometimes', 'required', 'exists:albums,id'],
         ];
     }
 }

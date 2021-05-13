@@ -25,6 +25,7 @@
 * /photo GET - Exibir todas as fotos do usuário.
 * /photo/{id} GET - Exibir uma unica foto.
 * /photo/{id} DELETE - Apagar a foto.
+* /add-to-album POST - Adicionar fotos existente a um album existente
 
 ### Albums
 
